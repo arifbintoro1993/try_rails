@@ -1,0 +1,8 @@
+<div class="d-flex align-items-center justify-content-center">
+  <h1>I Tried Ruby on Rails</h1>
+</div>
+<% if @user %>
+  <p>Logged in as: <b><%= @user.email %></b></p>
+  <%= button_to "Logout", logout_path, method: :delete, class: "btn btn-danger" %>
+
+<% end %>
