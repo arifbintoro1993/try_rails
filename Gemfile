@@ -58,3 +58,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rexml'
+gem 'active_model_serializers'
+gem 'font-awesome-rails'

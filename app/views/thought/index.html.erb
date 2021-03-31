@@ -16,9 +16,15 @@
         <h6 class="card-title">Idea shared by <%= thought.user.email %></h5>
         <p class="card-subtitle mb-2 text-muted border-bottom" style="font-size: 11px;"><%= thought.posted_at %></p>
         <p class="card-text"><%= thought.idea %></p>
-        <a href="#" class="card-link btn btn-outline-link"><i class="fas fa-heart"></i></a>
+        <%= link_to like_path(thought.id), method: :post, class: "card-link btn btn-outline-link", id: "like-button", remote: true do %>
+          <% if thought.like.present? %>
+            <%= thought.like.count %>
+          <% end %>
+          <%= fa_icon "heart" %>
+        <% end %>
         <a href="#" class="card-link btn btn-outline-link"><i class="far fa-comment"></i></a>
       </div> 
     </div>
   <% end %>
 </div>
+

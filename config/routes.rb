@@ -29,5 +29,5 @@ Rails.application.routes.draw do
   get "home", to: "thought#index", as: :home
   post "thought/post/", to: "thought#create"
 
-  post "tought/:id/like", to: "like#create", as: :like
+  post "thought/:id/like", to: "like#create", as: :like
 end
