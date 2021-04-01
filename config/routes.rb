@@ -30,4 +30,6 @@ Rails.application.routes.draw do
   post "thought/post/", to: "thought#create"
 
   post "thought/:id/like", to: "like#create", as: :like
+
+  post "api/auth", to: "authentication#login", as: :api_auth
 end

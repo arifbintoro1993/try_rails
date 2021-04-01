@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
     # Validate email presence is True or email is Mandatory
     validates :email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: "must be a vaild email address" }
+    validates_uniqueness_of   :email
 end
