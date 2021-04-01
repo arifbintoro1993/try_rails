@@ -16,5 +16,4 @@ RSpec.describe Thought, type: :model do
     thought = Thought.new(idea: "This is my idea.", user: user)
     expect(thought).to be_valid
   end
-
 end

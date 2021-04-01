@@ -26,4 +26,10 @@ Rails.application.routes.draw do
   get "password/reset/edit", to: "password_resets#edit"
   patch "password/reset/edit", to: "password_resets#update"
 
+  get "home", to: "thought#index", as: :home
+  post "thought/post/", to: "thought#create"
+
+  post "thought/:id/like", to: "like#create", as: :like
+
+  post "api/auth", to: "authentication#login", as: :api_auth
 end
