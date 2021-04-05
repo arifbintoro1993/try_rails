@@ -1,4 +1,4 @@
-class AuthenticationController < ApiApplicationController
+class AuthController < ApiApplicationController
     before_action :auth_request, except: :login
 
     def login

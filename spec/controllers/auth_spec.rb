@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "Authentication API using JWT", type: :request do
-    context "when post request without headers authentication" do
+RSpec.describe "Auth API using JWT", type: :request do
+    context "when post request without headers auth" do
         it "then response to unauthorized" do
             post api_auth_path
             
