@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :like do
-    thought { nil }
-    user { nil }
+    thought { create(:thought) }
+    user { create(:user) }
   end
 end
